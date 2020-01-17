@@ -3,3 +3,5 @@ wform.py
 top_block.py
 pruebas/ # esto ignora una carpeta llamada pruebas
 *.pyc
+recibido.*
+
