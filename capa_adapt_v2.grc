@@ -274,7 +274,7 @@ blocks:
     bus_structure: null
     coordinate: [1080, 4]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: h
   id: variable
   parameters:
@@ -286,7 +286,7 @@ blocks:
     bus_structure: null
     coordinate: [1080, 68]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: h
   id: variable
   parameters:
@@ -327,7 +327,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: Sps*3
+    value: Sps*16
   states:
     bus_sink: false
     bus_source: false
