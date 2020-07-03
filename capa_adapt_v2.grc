@@ -474,7 +474,7 @@ blocks:
     alias: ''
     comment: ''
     gui_hint: menu@2:0,0,1,1
-    samp_rate_audio: '22000'
+    samp_rate_audio: samp_rate
   states:
     bus_sink: false
     bus_source: false
@@ -493,7 +493,7 @@ blocks:
     alias: ''
     comment: ''
     gui_hint: menu@2:1,0,1,1
-    samp_rate_audio: '22000'
+    samp_rate_audio: samp_rate
   states:
     bus_sink: false
     bus_source: false
