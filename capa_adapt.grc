@@ -284,9 +284,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1080, 68]
+    coordinate: [1080, 67]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: h
   id: variable
   parameters:
@@ -298,7 +298,7 @@ blocks:
     bus_structure: null
     coordinate: [1080, 132]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: h
   id: variable
   parameters:
@@ -364,8 +364,8 @@ blocks:
     coordinate: [408, 12]
     rotation: 0
     state: enabled
-- name: E3TRadio_decisor_ff_0
-  id: E3TRadio_decisor_ff
+- name: E3TRadio_decisor_fb_0
+  id: E3TRadio_decisor_fb
   parameters:
     Umbral: '0.'
     affinity: ''
@@ -377,9 +377,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [416, 500]
+    coordinate: [516, 501]
     rotation: 180
-    state: enabled
+    state: true
 - name: E3TRadio_diezma_ff_0
   id: E3TRadio_diezma_ff
   parameters:
@@ -394,7 +394,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [536, 492]
+    coordinate: [610, 490]
     rotation: 180
     state: enabled
 - name: b_Canal_AWGN_ff_0
@@ -413,7 +413,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [766, 268]
+    coordinate: [840, 266]
     rotation: 270
     state: enabled
 - name: b_EYE_Timing_f_0
@@ -566,6 +566,23 @@ blocks:
     coordinate: [232, 504]
     rotation: 180
     state: enabled
+- name: blocks_char_to_float_0
+  id: blocks_char_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: '1'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [397, 502]
+    rotation: 180
+    state: true
 - name: blocks_delay_0
   id: blocks_delay
   parameters:
@@ -638,7 +655,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [640, 500]
+    coordinate: [714, 498]
     rotation: 180
     state: enabled
 - name: blocks_null_sink_0
@@ -707,7 +724,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [352, 180]
+    coordinate: [426, 178]
     rotation: 0
     state: enabled
 - name: menu
@@ -1278,7 +1295,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [603, 263]
+    coordinate: [677, 261]
     rotation: 270
     state: enabled
 - name: vs_0_0
@@ -1291,7 +1308,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [607, 381]
+    coordinate: [681, 379]
     rotation: 90
     state: enabled
 - name: vs_0_0_1
@@ -1480,13 +1497,14 @@ blocks:
     state: enabled
 
 connections:
-- [E3TRadio_decisor_ff_0, '0', b_unipolar2bipolar_ff_0, '0']
-- [E3TRadio_diezma_ff_0, '0', E3TRadio_decisor_ff_0, '0']
+- [E3TRadio_decisor_fb_0, '0', blocks_char_to_float_0, '0']
+- [E3TRadio_diezma_ff_0, '0', E3TRadio_decisor_fb_0, '0']
 - [b_Canal_AWGN_ff_0, '0', blocks_multiply_const_vxx_0, '0']
 - [b_binary_bipolar_source_f_0, '0', interp_fir_filter_xxx_0, '0']
 - [b_binary_bipolar_source_f_0, '0', vs_0_2, '0']
 - [b_unipolar2bipolar_ff_0, '0', blocks_null_sink_0, '0']
 - [b_unipolar2bipolar_ff_0, '0', vs_0_0_1, '0']
+- [blocks_char_to_float_0, '0', b_unipolar2bipolar_ff_0, '0']
 - [blocks_delay_0, '0', qtgui_time_sink_x_0, '0']
 - [blocks_delay_0_1, '0', qtgui_time_sink_x_0_1_0, '0']
 - [blocks_delay_0_1_0, '0', qtgui_time_sink_x_0_1, '0']
