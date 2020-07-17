@@ -815,7 +815,7 @@ blocks:
     factor9: '1'
     graph_type: qtgui.NUM_GRAPH_HORIZ
     gui_hint: menu@1:0,1,1,1
-    label1: Power of noise after sampling with matching
+    label1: Power of noise after sampling con acop.
     label10: ''
     label2: ''
     label3: ''
@@ -878,7 +878,7 @@ blocks:
     factor9: '1'
     graph_type: qtgui.NUM_GRAPH_HORIZ
     gui_hint: menu@1:0,2,1,1
-    label1: Power of noise after sampling without matching
+    label1: Power of noise after sampling sin acop
     label10: ''
     label2: ''
     label3: ''
